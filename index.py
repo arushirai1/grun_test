@@ -1,13 +1,9 @@
 import os
 import requests
-
-
 from gevent.pywsgi import WSGIServer
 from flask import Flask, after_this_request, render_template, request, send_file
 
-
 app = Flask(__name__)
-
 
 @app.route('/', methods=['GET'])
 def api():
